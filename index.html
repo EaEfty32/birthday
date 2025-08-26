@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, Bepy! 🎈</title>
+  <meta name="description" content="A simple, classy birthday wish for Bepy." />
+  <meta property="og:title" content="Happy Birthday, Bepy! 🎈" />
+  <meta property="og:description" content="Vibrant colors, soft words, and a respectful wish." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Decorative background -->
+  <div class="bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grain"></div>
+  </div>
+
+  <main id="app" class="container">
+    <header class="hero" role="banner" aria-label="Birthday Greeting">
+      <h1 class="headline">
+        <span class="eyebrow">It’s your day!!!</span>
+        <span id="recipientName">Hridi Whrittika Das</span> , Happy Birthday! 😊🎂
+      </h1>
+      <p class="tagline">
+        Wishing you nothing but the very best today and always. 😊
+      </p>
+
+      <div class="cta-row">
+        <button id="confettiBtn" class="btn primary">Launch</button>
+        <button id="letterBtn" class="btn">Open letter</button>
+        <button id="audioBtn" class="btn" aria-pressed="false" aria-label="Play or pause music">Play music</button>
+      </div>
+
+      <p id="since" class="since" hidden></p>
+
+      <div class="chips" role="list">
+        <span class="chip" role="listitem">🎶 Classical songs</span>
+        <span class="chip" role="listitem">🌈 Vibrant colors</span>
+        <span class="chip" role="listitem">📝 Poetry</span>
+      </div>
+    </header>
+
+    <!-- Memories section removed as requested -->
+
+    <section class="panel" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="panel-title">A small gallery</h2>
+      <div class="grid" id="gallery" role="list"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="wish-title">
+      <h2 id="wish-title" class="panel-title">Birthday wish</h2>
+      <div class="card">
+        <p id="wishText" class="wish"></p>
+        <!-- WhatsApp + Copy link removed as requested -->
+      </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+      <p>— From <span id="senderName">Your Bepy</span></p>
+      <p class="fine">Built with love.</p>
+    </footer>
+  </main>
+
+  <!-- Short Letter Modal -->
+  <dialog id="letterModal" class="modal" aria-labelledby="letter-title">
+    <form method="dialog" class="modal-inner">
+      <h3 id="letter-title">A short letter</h3>
+      <div id="letterBody" class="modal-body"></div>
+      <div class="modal-actions">
+        <button class="btn" value="cancel">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Optional audio (replace src with your file) -->
+  <audio id="bgm" loop>
+    <!-- Example: <source src="./audio/raag-ambient.mp3" type="audio/mpeg" /> -->
+  </audio>
+
+  <!-- Confetti (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>
